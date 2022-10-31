@@ -1,5 +1,6 @@
 # Yotpo-Commerce
-A lightweight and fully customizable eCommerce Platform built using CodeIgniter 4 and Bootstrap 5
+A lightweight and fully customizable eCommerce Platform built using CodeIgniter 4 and Bootstrap 5.<br>
+Intended for integrating with Yotpo's Reviews and Ratings App.
 
 # Server Requirements
 - PHP version 7.4 or newer
