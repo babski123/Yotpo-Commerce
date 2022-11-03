@@ -1,9 +1,9 @@
 <?php
 /**
  * Yotpo Commerce
- * Path: app/Controllers/Collections.php
+ * Path: app/Controllers/Product.php
  * Author: eleazer.ababa181@gmail.com
- * Description: The controller that handles the collection page
+ * Description: The controller that handles the product details page
  */
 
 namespace App\Controllers;
@@ -26,7 +26,11 @@ class Product extends BaseController
     }
 
     public function view($productSlug) {
-        echo "Test" . $productSlug;
+        $data = $this->storeSettings;
+        $data["pageTitle"] = $this->storeSettings["storeName"] . " - All Products" ;
+        $data["currentController"] = $this->router->controllerName();
+        
+        return view("pages/product.php", $data);
     }
 }
 

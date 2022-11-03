@@ -24,6 +24,7 @@ class Home extends BaseController
     {
         $data = $this->storeSettings;
         $data["pageTitle"] = $this->storeSettings["storeName"];
+        $data["currentController"] = $this->router->controllerName();
         return view('pages/home', $data);
     }
 }

@@ -25,6 +25,12 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/fontawesome.min.css">
+
+    <?php if($currentController == "\App\Controllers\Product"): ?>
+    <!-- Slick -->
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/slick-theme.css">    
+    <?php endif; ?>
 </head>
 
 <body>
@@ -222,6 +228,43 @@
     <script src="<?= base_url(); ?>/assets/js/templatemo.js"></script>
     <script src="<?= base_url(); ?>/assets/js/custom.js"></script>
     <!-- End Script -->
+
+    <?php if($currentController == "\App\Controllers\Product"): ?>
+    <!-- Start Slider Script -->
+    <script src="<?= base_url(); ?>/assets/js/slick.min.js"></script>
+    <script>
+        $('#carousel-related-product').slick({
+            infinite: true,
+            arrows: false,
+            slidesToShow: 4,
+            slidesToScroll: 3,
+            dots: true,
+            responsive: [{
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 3
+                    }
+                }
+            ]
+        });
+    </script>
+    <!-- End Slider Script --> 
+    <?php endif; ?>
 </body>
 
 </html>
