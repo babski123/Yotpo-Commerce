@@ -3,7 +3,7 @@
  * Yotpo Commerce
  * Path: app/Helpers/date_helper.php
  * Author: eleazer.ababa181@gmail.com
- * Description: Extends the Date helper
+ * Description: Extends the Date helper functions
  */
 
 //get the current date and time that is acceptable in 'datetime' field type in mysql db

@@ -15,16 +15,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="<?= base_url(); ?>/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>/assets/img/favicon.ico">
 
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/templatemo.css">
-    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/templatemo.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/custom.css">
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/fontawesome.min.css">
 </head>
 
 <body>
@@ -34,15 +34,14 @@
             <div class="w-100 d-flex justify-content-between">
                 <div>
                     <i class="fa fa-envelope mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com"><?= $storeEmail; ?></a>
                     <i class="fa fa-phone mx-2"></i>
-                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                    <a class="navbar-sm-brand text-light text-decoration-none" href="tel:010-020-0340"><?= $storeContactNum; ?></a>
                 </div>
                 <div>
-                    <a class="text-light" href="https://fb.com/templatemo" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
-                    <a class="text-light" href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin fa-sm fa-fw"></i></a>
+                    <a class="text-light" href="<?= $fbPageUrl; ?>" target="_blank" rel="sponsored"><i class="fab fa-facebook-f fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="<?= $igPageUrl; ?>" target="_blank"><i class="fab fa-instagram fa-sm fa-fw me-2"></i></a>
+                    <a class="text-light" href="<?= $twitterPageUrl; ?>" target="_blank"><i class="fab fa-twitter fa-sm fa-fw me-2"></i></a>
                 </div>
             </div>
         </div>
@@ -55,7 +54,7 @@
         <div class="container d-flex justify-content-between align-items-center">
 
             <a class="navbar-brand text-success logo h1 align-self-center" href="home">
-                Zay
+                <?= $storeName; ?>
             </a>
 
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#templatemo_main_nav" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -66,16 +65,16 @@
                 <div class="flex-fill">
                     <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="home">Home</a>
+                            <a class="nav-link" href="<?= base_url(); ?>/home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="<?= base_url(); ?>/about">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="shop.html">Shop</a>
+                            <a class="nav-link" href="<?= base_url(); ?>/collections">Shop</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
+                            <a class="nav-link" href="<?= base_url(); ?>/contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -131,19 +130,19 @@
             <div class="row">
 
                 <div class="col-md-4 pt-5">
-                    <h2 class="h2 text-success border-bottom pb-3 border-light logo">Zay Shop</h2>
+                    <h2 class="h2 text-success border-bottom pb-3 border-light logo"><?= $storeName; ?></h2>
                     <ul class="list-unstyled text-light footer-link-list">
                         <li>
                             <i class="fas fa-map-marker-alt fa-fw"></i>
-                            123 Consectetur at ligula 10660
+                            <?= $storeAddress; ?>
                         </li>
                         <li>
                             <i class="fa fa-phone fa-fw"></i>
-                            <a class="text-decoration-none" href="tel:010-020-0340">010-020-0340</a>
+                            <a class="text-decoration-none" href="tel:010-020-0340"><?= $storeContactNum; ?></a>
                         </li>
                         <li>
                             <i class="fa fa-envelope fa-fw"></i>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@company.com</a>
+                            <a class="text-decoration-none" href="mailto:info@company.com"><?= $storeEmail; ?></a>
                         </li>
                     </ul>
                 </div>
@@ -181,16 +180,13 @@
                 <div class="col-auto me-auto">
                     <ul class="list-inline text-left footer-icons">
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="http://facebook.com/"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="<?= $fbPageUrl; ?>"><i class="fab fa-facebook-f fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.instagram.com/"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="<?= $igPageUrl; ?>"><i class="fab fa-instagram fa-lg fa-fw"></i></a>
                         </li>
                         <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://twitter.com/"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
-                        </li>
-                        <li class="list-inline-item border border-light rounded-circle text-center">
-                            <a class="text-light text-decoration-none" target="_blank" href="https://www.linkedin.com/"><i class="fab fa-linkedin fa-lg fa-fw"></i></a>
+                            <a class="text-light text-decoration-none" target="_blank" href="<?= $twitterPageUrl; ?>"><i class="fab fa-twitter fa-lg fa-fw"></i></a>
                         </li>
                     </ul>
                 </div>
@@ -209,8 +205,7 @@
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            Copyright &copy; 2021 Company Name 
-                            | Designed by <a rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                            Copyright &copy; 2022 <?= $storeName; ?>
                         </p>
                     </div>
                 </div>
@@ -221,11 +216,11 @@
     <!-- End Footer -->
 
     <!-- Start Script -->
-    <script src="assets/js/jquery-1.11.0.min.js"></script>
-    <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/templatemo.js"></script>
-    <script src="assets/js/custom.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/templatemo.js"></script>
+    <script src="<?= base_url(); ?>/assets/js/custom.js"></script>
     <!-- End Script -->
 </body>
 

@@ -1,15 +1,15 @@
 <?php
 /**
  * Yotpo Commerce
- * Path: app/Controllers/Home.php
+ * Path: app/Controllers/Collections.php
  * Author: eleazer.ababa181@gmail.com
- * Description: The controller that handles the home page
+ * Description: The controller that handles the collection page
  */
 
 namespace App\Controllers;
 use App\Models\StoreSettings;
 
-class Home extends BaseController
+class Product extends BaseController
 {
 
     public $storeSettingsModel;
@@ -22,8 +22,11 @@ class Home extends BaseController
 
     public function index()
     {
-        $data = $this->storeSettings;
-        $data["pageTitle"] = $this->storeSettings["storeName"];
-        return view('pages/home', $data);
+        throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("This page does not exist");
+    }
+
+    public function view($productSlug) {
+        echo "Test" . $productSlug;
     }
 }
+
