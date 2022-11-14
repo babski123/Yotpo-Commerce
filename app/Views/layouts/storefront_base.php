@@ -1,7 +1,7 @@
 <?php
 /**
  * Yotpo Commerce
- * Path: app/Views/layouts/base.php
+ * Path: app/Views/layouts/storefront_base.php
  * Author: eleazer.ababa181@gmail.com
  * Description: The base layout of the front-end
  */
@@ -15,21 +15,21 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="<?= base_url(); ?>/assets/img/apple-icon.png">
-    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>/assets/img/favicon.ico">
+    <link rel="apple-touch-icon" href="<?= base_url(); ?>/public/assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="<?= base_url(); ?>/public/assets/img/favicon.ico">
 
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/templatemo.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/custom.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/assets/css/templatemo.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/assets/css/custom.css">
 
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
-    <link rel="stylesheet" href="<?= base_url(); ?>/assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>/public/assets/css/fontawesome.min.css">
 
     <?php if($currentController == "\App\Controllers\Product"): ?>
     <!-- Slick -->
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/slick-theme.css">    
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/public/assets/css/slick.min.css">
+    <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/public/assets/css/slick-theme.css">    
     <?php endif; ?>
 </head>
 
@@ -222,16 +222,16 @@
     <!-- End Footer -->
 
     <!-- Start Script -->
-    <script src="<?= base_url(); ?>/assets/js/jquery-1.11.0.min.js"></script>
-    <script src="<?= base_url(); ?>/assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="<?= base_url(); ?>/assets/js/bootstrap.bundle.min.js"></script>
-    <script src="<?= base_url(); ?>/assets/js/templatemo.js"></script>
-    <script src="<?= base_url(); ?>/assets/js/custom.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/jquery-1.11.0.min.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/templatemo.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/custom.js"></script>
     <!-- End Script -->
 
     <?php if($currentController == "\App\Controllers\Product"): ?>
     <!-- Start Slider Script -->
-    <script src="<?= base_url(); ?>/assets/js/slick.min.js"></script>
+    <script src="<?= base_url(); ?>/public/assets/js/slick.min.js"></script>
     <script>
         $('#carousel-related-product').slick({
             infinite: true,

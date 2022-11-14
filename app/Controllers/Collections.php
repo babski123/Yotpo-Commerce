@@ -25,7 +25,7 @@ class Collections extends BaseController
         $data = $this->storeSettings;
         $data["pageTitle"] = $this->storeSettings["storeName"] . " - All Products" ;
         $data["currentController"] = $this->router->controllerName();
-        return view('pages/collections', $data);
+        return view('storefront/collections', $data);
     }
 }
 

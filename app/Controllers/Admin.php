@@ -1,15 +1,15 @@
 <?php
 /**
  * Yotpo Commerce
- * Path: app/Controllers/Product.php
+ * Path: app/Controllers/Admin.php
  * Author: eleazer.ababa181@gmail.com
- * Description: The controller that handles the product details page
+ * Description: The controller that handles the admin page
  */
 
 namespace App\Controllers;
 use App\Models\StoreSettings;
 
-class Product extends BaseController
+class Admin extends BaseController
 {
 
     public $storeSettingsModel;
@@ -22,15 +22,9 @@ class Product extends BaseController
 
     public function index()
     {
-        throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("This page does not exist");
-    }
-
-    public function view($productSlug) {
         $data = $this->storeSettings;
-        $data["pageTitle"] = $this->storeSettings["storeName"] . " - All Products" ;
+        $data["pageTitle"] = $this->storeSettings["storeName"];
         $data["currentController"] = $this->router->controllerName();
-        
-        return view("storefront/product", $data);
+        return view('admin/login', $data);
     }
 }
-
