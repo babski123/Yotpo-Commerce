@@ -11,15 +11,6 @@ use App\Models\StoreSettings;
 
 class Admin extends BaseController
 {
-
-    public $storeSettingsModel;
-    public $storeSettings;
-
-    public function __construct() {
-        $this->storeSettingsModel = model(StoreSettings::class);
-        $this->storeSettings = $this->storeSettingsModel->getSettings();
-    }
-
     public function index()
     {
         $data = $this->storeSettings;

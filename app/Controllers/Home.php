@@ -11,16 +11,7 @@ use App\Models\StoreSettings;
 
 class Home extends BaseController
 {
-
-    public $storeSettingsModel;
-    public $storeSettings;
-
-    public function __construct() {
-        $this->storeSettingsModel = model(StoreSettings::class);
-        $this->storeSettings = $this->storeSettingsModel->getSettings();
-    }
-
-    public function index()
+   public function index()
     {
         $data = $this->storeSettings;
         $data["pageTitle"] = $this->storeSettings["storeName"];

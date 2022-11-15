@@ -11,20 +11,6 @@ use App\Models\StoreSettings;
 
 class Product extends BaseController
 {
-
-    public $storeSettingsModel;
-    public $storeSettings;
-
-    public function __construct() {
-        $this->storeSettingsModel = model(StoreSettings::class);
-        $this->storeSettings = $this->storeSettingsModel->getSettings();
-    }
-
-    public function index()
-    {
-        throw \CodeIgniter\Exceptions\PageNotFoundException::forPageNotFound("This page does not exist");
-    }
-
     public function view($productSlug) {
         $data = $this->storeSettings;
         $data["pageTitle"] = $this->storeSettings["storeName"] . " - All Products" ;

@@ -35,7 +35,7 @@ abstract class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = [];
+    protected $helpers = ["utils"];
 
     /**
      * Constructor.
@@ -46,7 +46,16 @@ abstract class BaseController extends Controller
         parent::initController($request, $response, $logger);
 
         // Preload any models, libraries, etc, here.
-        $this->router = service("router");
+
+        //preload models
+        $this->storeSettingsModel = model(StoreSettings::class);
+        $this->storeSettings = $this->storeSettingsModel->getSettings();
+
+        //preload services
+        $this->router = service("router"); //load router
+
+        //session
+        $this->session = session();
 
         // E.g.: $this->session = \Config\Services::session();
     }
