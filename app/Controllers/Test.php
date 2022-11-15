@@ -18,7 +18,9 @@ class Test extends BaseController
         echo "Hash: " . encrypt_pass($password);
         echo "<br>";
         if(password_verify('password', '$2y$10$qhuLPf/BXyAJ9Kf3DgujAOXNhhRoROsTXhU00PCb6v6fhAKsCPZnq')) {
-            echo "Password matched!";
+            echo "Password matched!<br>";
         }
+
+        echo json_encode($this->adminsModel->login("eleazer.ababa181@gmail.com", "pass1word"));
     }
 }

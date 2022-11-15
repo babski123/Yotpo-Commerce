@@ -45,6 +45,7 @@
             <h3 class="mb-4">Yotpo Commerce</h3>
             <h5 class="mb-4 text-secondary">Admin Login</h5>
 
+            <form method="post">
             <div class="form-outline mb-4">
               <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
               <label class="form-label" for="typeEmailX-2">Email</label>
@@ -55,13 +56,15 @@
               <label class="form-label" for="typePasswordX-2">Password</label>
             </div>
 
-            <!-- Checkbox -->
+            <!-- Checkbox 
             <div class="form-check d-flex justify-content-start mb-4">
               <input class="form-check-input" type="checkbox" value="" id="form1Example3" />
               <label class="form-check-label" for="form1Example3"> Remember password </label>
             </div>
+            -->
 
             <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            </form>
 
             <hr class="my-4">
 

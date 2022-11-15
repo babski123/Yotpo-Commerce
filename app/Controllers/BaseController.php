@@ -49,6 +49,9 @@ abstract class BaseController extends Controller
 
         //preload models
         $this->storeSettingsModel = model(StoreSettings::class);
+        $this->adminsModel = model(Admins::class);
+
+        //store preloaded models data
         $this->storeSettings = $this->storeSettingsModel->getSettings();
 
         //preload services

@@ -16,6 +16,11 @@ class Admin extends BaseController
         $data = $this->storeSettings;
         $data["pageTitle"] = $this->storeSettings["storeName"];
         $data["currentController"] = $this->router->controllerName();
-        return view('admin/login', $data);
+
+        if(is_staff_logged_in($this->session)) {
+            return view('admin/dashboard', $data);
+        }else{
+            return view('admin/login', $data);
+        }
     }
 }
