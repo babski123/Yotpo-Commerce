@@ -35,7 +35,7 @@ abstract class BaseController extends Controller
      *
      * @var array
      */
-    protected $helpers = ["utils"];
+    protected $helpers = ["utils", "form"];
 
     /**
      * Constructor.
@@ -56,6 +56,7 @@ abstract class BaseController extends Controller
 
         //preload services
         $this->router = service("router"); //load router
+        $this->request = service("request"); //load request
 
         //session
         $this->session = session();

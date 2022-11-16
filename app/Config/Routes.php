@@ -39,6 +39,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/collections/all', 'Collections::index');
 $routes->get('/product/(:alphanum)', 'Product::view/$1');
 $routes->get('/product/view/(:any)', 'Product::index');
+$routes->get('/admin/dashboard', 'Admin::index');
 
 /*
  * --------------------------------------------------------------------
