@@ -24,7 +24,7 @@
     <div class="position-sticky">
       <div class="list-group list-group-flush mx-3 mt-4">
         <a
-           href="#"
+           href="<?= base_url() . "/admin/dashboard" ?>"
            class="list-group-item list-group-item-action py-2 ripple <?php if($currentMethod == "index") echo "active"; ?>"
            aria-current="true"
            >
@@ -32,8 +32,8 @@
             ><span>Dashboard</span>
         </a>
         <a
-           href="#"
-           class="list-group-item list-group-item-action py-2 ripple"
+           href="<?= base_url() . "/admin/products" ?>"
+           class="list-group-item list-group-item-action py-2 ripple <?php if($currentMethod == "products") echo "active"; ?>"
            >
           <i class="fas fa-chart-area fa-fw me-3"></i
             ><span>Products</span>
@@ -253,7 +253,7 @@
 
 <!--Main layout-->
 <main style="margin-top: 58px">
-  <div class="container pt-4">
+  <div class="container-fluid py-4 px-4">
     <?= $this->renderSection('content') ?>
   </div>
 </main>
