@@ -35,19 +35,17 @@
            href="<?= base_url() . "/admin/products" ?>"
            class="list-group-item list-group-item-action py-2 ripple <?php if($currentMethod == "products") echo "active"; ?>"
            >
-          <i class="fas fa-chart-area fa-fw me-3"></i
-            ><span>Products</span>
+          <i class="fas fa-tags fa-fw me-3"></i><span>Products</span>
         </a>
         <a
            href="#"
            class="list-group-item list-group-item-action py-2 ripple"
-           ><i class="fas fa-lock fa-fw me-3"></i><span>Orders</span></a
+           ><i class="fas fa-shopping-cart fa-fw me-3"></i><span>Orders</span></a
           >
         <a
            href="#"
            class="list-group-item list-group-item-action py-2 ripple"
-           ><i class="fas fa-chart-line fa-fw me-3"></i
-          ><span>Customers</span></a
+           ><i class="fas fa-users fa-fw me-3 "></i><span>Customers</span></a
           >
         <a
            href="#"
@@ -86,10 +84,10 @@
       </button>
 
       <!-- Brand -->
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand">
         <img
-             src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png"
-             height="25"
+             src="<?= base_url() . "/public/assets/img/logo/Yotpo.png" ?>"
+             height="30"
              alt=""
              loading="lazy"
              />

@@ -68,6 +68,7 @@ class Admin extends BaseController
 
         if(is_staff_logged_in($this->session)) {
 
+            //list all products
             return view('admin/products', $data);
 
         }else{
@@ -76,6 +77,19 @@ class Admin extends BaseController
             return redirect()->to(base_url() . "/admin");
 
         }
+    }
+
+    public function addProduct() {
+        $data = $this->storeSettings;
+        $data["pageTitle"] = $this->storeSettings["storeName"] . " - Add product";
+        $data["currentController"] = $this->router->controllerName();
+        $data["currentMethod"] = $this->router->methodName();
+
+        return view('admin/add_product', $data);
+    }
+
+    public function viewProduct() {
+        echo "view product";
     }
 
     //logout function

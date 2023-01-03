@@ -6,7 +6,17 @@
         background-color: #efefef;
     }
 </style>
-<h3>Products</h3>
+
+<div class="row align-items-center mb-4">
+  <div class="col">
+    <h3 class="m-0 p-0" >Products</h3>
+  </div>
+  <div class="col text-end">
+    <a href="<?= base_url() . "/admin/products/add" ?>" class="btn btn-primary mx-1" data-mdb-ripple-color="#ffffff"><i class="fas fa-plus-square"></i>&nbsp; Add product</a>
+    <a href="#" class="btn btn-light mx-1" data-mdb-ripple-color="#ffffff"><i class="fas fa-download"></i>&nbsp; Export</a>
+    <a href="#" class="btn btn-light mx-1" data-mdb-ripple-color="#ffffff"><i class="fas fa-upload"></i>&nbsp; Import</a>
+  </div>
+</div>
 <div class="table-responsive">
 <table class="table align-middle mb-0 bg-light">
   <thead class="bg-light">

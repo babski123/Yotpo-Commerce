@@ -35,11 +35,35 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+//storefront - home page
 $routes->get('/', 'Home::index');
+
+//storefront - collection page
 $routes->get('/collections/all', 'Collections::index');
+
+//storefront - view product page
 $routes->get('/product/(:alphanum)', 'Product::view/$1');
+
+//storefront - accessing the view product page controller directly should not be allowed
+//so, route to home page
 $routes->get('/product/view/(:any)', 'Product::index');
+
+//admin - dashboard
 $routes->get('/admin/dashboard', 'Admin::index');
+
+//admin - add new product
+$routes->get('/admin/products/add', 'Admin::addProduct');
+$routes->post('/admin/products/add', 'Admin::addProduct');
+
+//accessing the add product controller directly is not allowed, route to products list
+$routes->get('/admin/addproduct', 'Admin::products');
+
+//accessing the add product controller directly is not allowed, route to products list
+$routes->get('/admin/addProduct', 'Admin::products');
+
+//edit products
+//$routes->get('/admin/products/(:alphanum)', 'Admin::addProduct');
 
 /*
  * --------------------------------------------------------------------
